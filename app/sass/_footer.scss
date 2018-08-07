@@ -1,0 +1,37 @@
+.footer{
+	background: #777;
+	color: #fff;
+	padding: 20px 0;
+	.logo{
+		a{
+			background: url(../images/logo_bottom.png) no-repeat;
+			background-size: cover !important;
+		}
+	}
+	.inst{
+		background: url(../images/inst_white.png) no-repeat;
+		background-size: cover !important;
+	}
+	.copy{
+		margin: 0 auto;
+	}
+	@media screen and (max-width: 960px){
+		padding-bottom: 11px;
+		padding-top: 15px;
+		> .container{
+			display: block;
+		}
+		.logo{
+			display: block;
+			margin: 0 auto;
+		}
+		.copy{
+			display: block;
+			margin: 0;
+			text-align: center;
+			font-size: 12px;
+			line-height: 15px;
+			padding-top: 13px;
+		}
+	}
+}

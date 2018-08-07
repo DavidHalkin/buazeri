@@ -1,10 +1,8 @@
 $(document).ready(function (){
-	 $(".mob__js").click(function () {
+	 $(".btn_menu__js").click(function () {
         $(".nav_bar__js").addClass("opened");
-        $("body").addClass("overflow");
     });
-    $(".close_js").click(function () {
+    $(".close_btn__js").click(function () {
         $(".nav_bar__js").removeClass("opened");
-        $("body").removeClass("overflow");
     });
 })
