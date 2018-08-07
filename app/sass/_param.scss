@@ -82,6 +82,7 @@
 }
 .btn{
 	max-width: 380px;
+	max-width:calc(380vw / 19.2);
 	display: inline-block;
 	width: 100%;
 	border: 1px solid #707070;
@@ -89,7 +90,10 @@
 	text-align: center;
 	font-size: 36px;
 	line-height: 38px;
+	font-size: calc(36vw / 19.2);
+	line-height: calc(38vw / 19.2);
 	padding: 15px 5px;
+	padding:calc(15vw / 19.2) calc(5vw / 19.2);
 	transition: all 0.3s ease;
 	&:hover{
 		background: #707070;
@@ -97,7 +101,7 @@
 		transition: all 0.5s ease;
 		text-decoration: none;
 	}
-	@media screen and (max-width: 1200px){
+	@media screen and (max-width: 960px){
 		max-width: 185px;
 		font-size: 18px;
 		line-height: 20px;

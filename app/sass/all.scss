@@ -31,15 +31,22 @@ body{
 		line-height: 73px;
 		font-weight: bold;
 		padding-bottom: 21px;
+		font-size: calc(72vw / 19.2);
+		line-height: calc(73vw / 19.2);
+		padding-bottom: calc(21vw / 19.2);
 	}
 	p{
 		font-size: 36px;
 		line-height: 42px;
 		margin: 0;
 		padding: 0 30px;
+		padding: 0 calc(30vw / 19.2);
+		font-size: calc(36vw / 19.2);
+		line-height:calc(42vw / 19.2);
 	}
 	.container_fluid{
 		padding: 130px 150px 20px;
+		padding: calc(130vw / 19.2) calc(150vw / 19.2) calc(20vw / 19.2);
 	}
 	@media screen and (max-width: 1200px) {
 		.container_fluid{
@@ -79,6 +86,7 @@ body{
 }
 .text_info{
 	padding: 0 100px;
+	padding: 0 calc(100vw / 19.2);
 	display: flex;
 	flex-flow:column nowrap;
 	justify-content:center;
@@ -89,35 +97,45 @@ body{
 	}
 	h2{
 		margin: 0;
-		font-size: 48px;
-		line-height: 52px;
+		// font-size: 48px;
+		// line-height: 52px;
 		font-weight: normal;
 		padding-bottom: 10px;
+		padding-bottom: calc(10vw / 19.2);
+		// font-size: 2.6vw;
+		// line-height: 2.8vw;
+		font-size: calc(48vw / 19.2);
+		line-height: calc(52vw / 19.2);
 	}
 	p{
 		margin: 0;
-		font-size: 24px;
-		line-height: 28px;
+		// font-size: 24px;
+		// line-height: 28px;
+		// font-size: 1.3vw;
+		// line-height: 1.7vw;
+		font-size: calc(24vw / 19.2);
+		line-height: calc(28vw / 19.2);
 	}
 	.btn{
 		margin-top: 70px;
+		margin-top: calc(70vw / 19.2);
 	}
 	@media screen and (max-width: 1500px){
-		max-width: 100%;
-		padding: 0 50px;
+		// max-width: 100%;
+		// padding: 0 50px;
 		h2{
-			font-size: 40px;
-			line-height: 44px;
+			// font-size: 40px;
+			// line-height: 44px;
 		}
 		p{
-			font-size: 20px;
-			line-height: 24px;
+			// font-size: 20px;
+			// line-height: 24px;
 		}
 		.btn{
-			margin-top: 30px;
+			// margin-top: 30px;
 		}
 	}
-	@media screen and (max-width: 1200px){
+	@media screen and (max-width: 960px){
 		h2{
 			font-size: 30px;
 			line-height: 34px;
