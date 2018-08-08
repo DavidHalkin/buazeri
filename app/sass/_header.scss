@@ -14,15 +14,20 @@
 		justify-content:space-around;
 		li{
 			padding: 0 5px;
+			&.active{
+				a{
+					text-decoration: underline;
+				}
+			}
 			a{
-				color: #333;
+				color: #777;
 				text-transform: uppercase;
 			}
 		}
 	}
 	.logo{
 		a{
-			background: url(../images/logo_top.png) no-repeat;
+			background: url(../images/logo_top.svg) no-repeat;
 			background-size: cover !important;
 		}
 	}
@@ -35,13 +40,13 @@
 	width: 66px;
 	height: 66px;
 	display: inline-block;
-	background: url(../images/inst.png) no-repeat;
+	background: url(../images/inst.svg) no-repeat;
 	background-size: cover !important;
 }
 .logo{
 	margin: 0;
 	width:292px;
-	height:86px;
+	height:84px;
 
 	a{
 		line-height: 0;
@@ -56,10 +61,10 @@
 @media screen and (max-width: 1200px) {
 	.logo{
 		width: 200px;
-		height: 59px;
+		height: 58px;
 		@media screen and (max-width: 960px){
 			width: 130px;
-			height: 38px;
+			height: 37px;
 		}
 	}
 	.inst{
@@ -114,9 +119,11 @@
 		left: 0;
 		background: #fff;
 		text-align: center;
+		border-bottom: 1px solid #777;
 		display: block !important;
 		transition: opacity 0.3s ease,top 0.3s ease;
 		opacity: 0;
+		z-index: 200;
 		&.opened{
 			transition: opacity 1s ease,top 1s ease;
 			top: 0;
