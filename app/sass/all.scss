@@ -186,8 +186,8 @@ body{
 	padding: 0 15px 30px;
 	h1{
 		font-weight: normal;
-		font-size: 48px;
-		line-height: 50px;
+		font-size: 36px;
+		line-height: 38px;
 		// font-size: calc(48vw / 19.2);
 		// line-height: calc(50vw / 19.2);
 		margin: 0;
@@ -344,8 +344,8 @@ body{
 	}
 	.btn{
 		max-width: 380px;
-		font-size: 36px;
-		line-height: 38px;
+		font-size: 24px;
+		line-height: 26px;
 		padding:15px 5px;
 	}
 	@media screen and (max-width: 960px){
@@ -395,8 +395,8 @@ body{
 	padding-top: 40px;
 	h2{
 		margin: 0;
-		font-size: 48px;
-		line-height: 50px;
+		font-size: 36px;
+		line-height: 38px;
 		font-weight: normal;
 		padding: 0 15px;
 	}
@@ -410,15 +410,19 @@ body{
 }
 .text_page{
 	h1{
-		font-size: 30px;
-		line-height: 32px;
+		font-size: 36px;
+		line-height: 38px;
 		font-weight: normal;
 		margin: 0;
 		padding-bottom: 26px;
+		@media screen and (max-width: 960px){
+			font-size: 30px;
+			line-height: 32px;
+		}
 	}
 	p{
-		font-size: 24px;
-		line-height: 29px;
+		font-size: 18px;
+		line-height: 22px;
 		margin: 0;
 		padding-bottom: 15px;
 	}
@@ -430,10 +434,10 @@ body{
 		padding: 33px 0 45px 0;
 	}
 	@media screen and (max-width: 960px){
-		p{
-			font-size: 20px;
-			line-height: 25px;
-		}
+		// p{
+		// 	font-size: 20px;
+		// 	line-height: 25px;
+		// }
 		h2{
 			padding-top: 15px;
 			padding-bottom: 20px;
@@ -443,6 +447,10 @@ body{
 	}
 }
 .designers_block{
+	padding-bottom: 40px;
+	@media screen and (max-width: 960px){
+		padding-bottom: 20px;
+	}
 	.col-3{
 		margin-bottom: 40px;
 		img{
@@ -650,8 +658,8 @@ body{
 	h2{
 		margin: 0;
 		font-weight: normal;
-		font-size: 48px;
-		line-height: 50px;
+		font-size: 36px;
+		line-height: 38px;
 	}
 	@media screen and (max-width: 960px){
 		padding: 15px;
