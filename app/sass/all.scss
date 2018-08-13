@@ -149,6 +149,8 @@ body{
 		}
 	}
 	@media screen and (max-width: 550px){
+		padding: 0 15px !important;
+		display: block !important;
 		h2{
 			font-size: 18px;
 			line-height: 22px;
