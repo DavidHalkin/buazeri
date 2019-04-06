@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /*utm_*
+
+User-agent: Yandex
+Disallow: /*utm_*
+Host: https://buazeri.org
+
+Sitemap: https://buazeri.org/sitemap.xml

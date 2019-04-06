@@ -18,12 +18,31 @@ var gulp       	= require('gulp'), // Подключаем Gulp
 	svgSprite 	 = require('gulp-svg-sprite'), //для свг спарйтов
  	svgmin 		 = require('gulp-svgmin'), //для свг спарйтов
  	cheerio 	 = require('gulp-cheerio'), //для свг спарйтов
-	replace 	 = require('gulp-replace'); //для свг спарйтов
+	replace 	 = require('gulp-replace'), //для свг спарйтов
+	sftp 		= require('gulp-sftp');
 
 
 var assetsDir = 'app/';
 var buildDir = 'markup/';
 
+
+ 
+// gulp.task('sftp', function () {
+//     return gulp.src('test/**/*')
+//         .pipe(sftp({
+//             host: 'office.element-studio.ru',
+//             remotePath:'/david.steklo-i-stal.element-studio.ru/TEST_MY',
+//             auth: 'keyMain'
+//         }));
+// });
+gulp.task('sftp', function () {
+    return gulp.src('test/**/*')
+        .pipe(sftp({
+            host: 'office.element-studio.ru',
+            remotePath:'/david.salon-oboev.element-studio.ru/TEST_MY',
+            auth: 'keyMain'
+        }));
+});
 
 // gulp-gh-pages 
 gulp.task('gh', function() {
@@ -73,23 +92,23 @@ gulp.task('gh', function() {
 // });
 
 
-//build sprites png
-// gulp.task('sprite', function () {
-//   var spriteData = gulp.src('app/images/sprites/*.png').pipe(spritesmith({
-//     imgName: 'sprite.png',
-//     cssName: '_sprite.scss',
-//     imgPath: '../images/sprite.png',
-//     padding: 5
-//   }));
-//   var imgStream = spriteData.img
-//     .pipe(buffer())
-//     .pipe(imagemin())
-//     .pipe(gulp.dest('app/images/')); 
-//   var cssStream = spriteData.css
-//     .pipe(gulp.dest('app/sass'));
+// build sprites png
+gulp.task('sprite', function () {
+  var spriteData = gulp.src('app/images/sprites/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: '_sprite.scss',
+    imgPath: '../images/sprite.png',
+    padding: 5
+  }));
+  var imgStream = spriteData.img
+    .pipe(buffer())
+    .pipe(imagemin())
+    .pipe(gulp.dest('app/images/')); 
+  var cssStream = spriteData.css
+    .pipe(gulp.dest('app/sass'));
  
-//   return merge(imgStream, cssStream);
-// });
+  return merge(imgStream, cssStream);
+});
 
 
 //библиотеки js
@@ -124,7 +143,7 @@ gulp.task('css-libs', ['sass'], function() {
 gulp.task('sass', function(){ // Создаем таск Sass
 	return gulp.src('app/sass/**/*.scss') // Берем источник
 		.pipe(sourcemaps.init())
-		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError)) // Преобразуем Sass в CSS посредством gulp-sass
+		.pipe(sass({outputStyle: 'compact'}).on('error', sass.logError)) // Преобразуем Sass в CSS посредством gulp-sass
 		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
 		.pipe(sourcemaps.write(''))
 		.pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
